@@ -2,6 +2,8 @@ public Program() {
   Runtime.UpdateFrequency = UpdateFrequency.Update10;
 }
 
+string TEXT_PANEL_NAME = "Text Panel (Grinder Ship)";
+
 double NEWTONS_PER_KG = 9.81d;
 int ROUND = 2;
 
@@ -29,7 +31,7 @@ public void Main(string argument, UpdateType updateSource) {
     sb.Append(name + ": " + percentFull + "%\n");
   }
 
-  var panel = GridTerminalSystem.GetBlockWithName("Text Panel (Grinder Ship)") as IMyTextPanel;
+  var panel = GridTerminalSystem.GetBlockWithName(TEXT_PANEL_NAME) as IMyTextPanel;
   panel.WriteText(sb.ToString(), false);
 }
 
